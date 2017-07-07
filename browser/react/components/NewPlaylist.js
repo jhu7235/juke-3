@@ -3,10 +3,9 @@ import React, {Component} from 'react';
 
 export default class NewPlaylist extends Component {
 
-  constructor () {
-    super();
+  constructor (props) {
+    super(props);
     this.state = {
-      // artists: [],
       inputValue: {value: '', clean: true}
     };
     this.onSubmit = this.onSubmit.bind(this);
@@ -20,8 +19,10 @@ export default class NewPlaylist extends Component {
 
   onSubmit(event) {
     event.preventDefault();
-    console.log(this.state.inputValue.value);
-    this.setState({inputValue: {value: ''}});
+    // axios.post('/api/playlists', { name: this.state.inputValue.value})
+    // .then(res => console.log(res.data));
+    this.props.addPlaylist(this.state.inputValue.value);
+    this.setState({inputValue: {value: '', clean: true}});
   }
 
   handleChange(event) {
