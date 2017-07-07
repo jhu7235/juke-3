@@ -20,13 +20,13 @@ const Sidebar = (props) => {
       <section>
         <h4 className="text-muted">PLAYLISTS</h4>
         <h4>
-          <Link className="btn btn-primary btn-block" to="/new-playist">
-            <span className="glyphicon glyphicon-plus"></span> PLAYLIST
+          <Link className="btn btn-primary btn-block" to="/new-playlist">
+            <span className="glyphicon glyphicon-plus" /> PLAYLIST
           </Link>
         </h4>
       </section>
     </sidebar>
   );
-}
+};
 
 export default Sidebar;
